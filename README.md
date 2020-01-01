@@ -17,6 +17,4 @@
 # Task 2
 
 ## Q1. Point out all the unbalanced trees.
-
-1. 3, 4, 5, 7
-2. 
+### For all three figures in Q1, the node '4' and '5' are mistakenly swapped in the figure.
