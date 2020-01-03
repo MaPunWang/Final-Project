@@ -1,3 +1,21 @@
+# Working enviornment and commands
+* This code is running under the c++ platform.
+* No commands is needed to enter for checking the task. The default output shows the following in order:
+    1. The in order traversal of the current BST after the implementation. (Task 1 Q1)
+        * AVL algorithm is done during each insert of nodes. (Task 2 Q3)
+    2. The in order traversal of the current BST after adding <2,49> and <0,33>. (Task 1 Q2)
+        * AVL algorithm is done during each insert of nodes. (Task 2 Q3)
+    3. The in order traversal of the current BST after removing <7,17>. (Task 1 Q2)
+    4. The age whose id is '13'. (Task 1 Q3)
+    5. The maximum height of the BST. (Additional information)
+    6. The pre-order traversal of the current BST. (Task Q1.1)
+    7. The age whose id is '6' using pre-order searching. (Task 3 Q1.2)
+
+### For changing the Tree
+Please use the menu shown on the output screen.
+
+
+
 # Task 1
 
 * To perform a BST, a class "BST" is created with Nodes and functions included.
@@ -19,15 +37,15 @@
 ## Q1. Point out all the unbalanced trees.
 ### For all three figures in Q1, the node '4' and '5' are mistakenly swapped in the figure.
 
-Figure (a) and (c) are unbalanced.
+Ans: Figure (a) and (c) are unbalanced.
 
 ## Q2. After executing all the questions in task 1 (Q1 ~ Q3), is the binary search tree balanced or not?
 
-The BST in Task 1 is not balanced. The subtree of node '10' has two right branches and zero left branches. As |left branches - right branches| > 1, the BST is unbalanced.
+Ans: The BST in Task 1 is not balanced. The subtree of node '10' has two right branches and zero left branches. As |left branches - right branches| > 1, the BST is unbalanced.
 
 ## Q3. If the binary search tree in Q2 is unbalanced, write a function rebalance () to rebalance the tree after each operation by using the AVL algorithm. As there are many approaches to make it balanced (e.g., RR, LL).
 
-The unbalanced part of the tree is the node '10'. It forms a linear search. To solve the unbalance, we can execute a left rotation and then a right rotation. That is the Left-Right rotation case.
+Ans: The unbalanced part of the tree is the node '10'. It forms a linear search. To solve the unbalance, we can execute a left rotation and then a right rotation. That is the Left-Right rotation case.
 
 The following is the additional functions for AVL Trees.
 
