@@ -1,5 +1,5 @@
 # Working enviornment and commands
-* This code is running under the c++ platform.
+* This code is running under the c++ platform with version of c++11.
 * No commands is needed to enter for checking the task. The default output shows the following in order:
     1. The in order traversal of the current BST after the implementation. (Task 1 Q1)
         * AVL algorithm is done during each insert of nodes. (Task 2 Q3)
@@ -151,3 +151,42 @@ The following is the additional functions for AVL Trees.
         }
         return Ptr;
     }
+
+
+
+# Task 3
+## Q1: Write a program that conducts a concurrent preorder traversal of the BST of task 1
+
+In this task, two funcions preorder() and preorder2() are added to print out the pre-order traversal BST and the age using pre-order searching through threads.
+
+The following are the added functions:
+
+        void preorder(Node * Ptr)           //Task 3: Q1: pre-prder traversal using thread
+        {
+            std::cout << Ptr -> key << " ";
+            if (Ptr -> left != NULL)
+            {
+                preorder(Ptr -> left);
+            }
+            if (Ptr -> right != NULL)
+            {
+                std::thread new_thread (preorder, Ptr -> right);
+                new_thread.join();
+            }
+        }
+
+        void preorder2(Node * Ptr, int key)         //Task 3: Q1: search for age by pre-order searching using thread
+        {
+            if (Ptr -> key != key && Ptr -> left != NULL)
+            {
+                preorder2(Ptr -> left, key);
+            }
+            if (Ptr -> key != key && Ptr -> right != NULL)
+            {
+                preorder2(Ptr -> right, key);
+            }
+            if (Ptr -> key == key)
+            {
+                std::cout << "\n" << "\n" << Ptr -> age << "    <- this is the age whose id is input"  << "\n" ;
+            }
+        }
